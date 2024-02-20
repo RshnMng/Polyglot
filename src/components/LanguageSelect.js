@@ -5,7 +5,6 @@ import { ChatContext } from "../pages/Chat";
 export default function LanguageSelect() {
   const state = useContext(Context);
   const updateLanguage = state.updateLanguage;
-  const chat = useContext(ChatContext);
   const addSelected = state.addSelected;
 
   return (

@@ -57,7 +57,7 @@ export default function ChatBox() {
           {waiting && (
             <div className="waiting">
               <img width={20} src="https://w7.pngwing.com/pngs/150/578/png-transparent-traffic-light-computer-icons-red-red-light-color-light-traffic.png" />
-              <div className="waiting-label" alt="">
+              <div className="waiting-label" alt="blinking light">
                 Chatbot waiting...
               </div>
             </div>
