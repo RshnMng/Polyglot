@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Context } from "../App";
-import { ChatContext } from "../pages/Chat";
 
 export default function LanguageSelect() {
   const state = useContext(Context);

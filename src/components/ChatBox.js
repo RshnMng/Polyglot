@@ -56,10 +56,8 @@ export default function ChatBox() {
         <div className="text-display" id="text-display">
           {waiting && (
             <div className="waiting">
-              <img width={20} src="https://w7.pngwing.com/pngs/150/578/png-transparent-traffic-light-computer-icons-red-red-light-color-light-traffic.png" />
-              <div className="waiting-label" alt="blinking light">
-                Chatbot waiting...
-              </div>
+              <img width={20} src="https://w7.pngwing.com/pngs/150/578/png-transparent-traffic-light-computer-icons-red-red-light-color-light-traffic.png" alt="blinking light" />
+              <div className="waiting-label">Chatbot waiting...</div>
             </div>
           )}
           {chatComponents}
