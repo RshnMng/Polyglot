@@ -8,7 +8,7 @@ export const ChatContext = createContext();
 
 export default function Chat() {
   const OpenAI = require("openai");
-  let apikey = "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";
+  let apikey = "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";
 
   const openai = new OpenAI({
     apiKey: apikey,

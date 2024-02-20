@@ -11,7 +11,7 @@ export const Context = createContext();
 
 function App() {
   const OpenAI = require("openai");
-  let apikey = "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";
+  let apikey = "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";
 
   const openai = new OpenAI({
     apiKey: apikey,
