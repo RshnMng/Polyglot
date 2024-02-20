@@ -13,7 +13,7 @@ export default function OriginalText() {
       <div className="response-input-div">
         <div className="response-label-textarea-div">
           <div className="response-label-div">
-            {state.inputLang == "spanish" || state.inputLang == "Spanish" ? (
+            {state.inputLang === "spanish" || state.inputLang === "Spanish" ? (
               <select className="flag-box input-flag spanish-flag" onChange={(event) => updateInputLang(event)}>
                 <option>Choose Language</option>
                 <option>English</option>
@@ -21,7 +21,7 @@ export default function OriginalText() {
                 <option>French</option>
                 <option>Tagalog</option>
               </select>
-            ) : state.inputLang == "tagalog" || state.inputLang == "Tagalog" ? (
+            ) : state.inputLang === "tagalog" || state.inputLang === "Tagalog" ? (
               <select className="flag-box input-flag philippines-flag" onChange={(event) => updateInputLang(event)}>
                 <option>Choose Language</option>
                 <option>English</option>
@@ -29,7 +29,7 @@ export default function OriginalText() {
                 <option>French</option>
                 <option>Tagalog</option>
               </select>
-            ) : state.inputLang == "french" || state.inputLang == "French" ? (
+            ) : state.inputLang === "french" || state.inputLang === "French" ? (
               <select className="flag-box response-input-flag french-flag" onChange={(event) => updateInputLang(event)}>
                 <option>Choose Language</option>
                 <option>English</option>

@@ -11,7 +11,7 @@ export default function Input() {
     <>
       <div className="home-label-textarea-div">
         <div className="home-label-div">
-          {state.inputLang == "spanish" || state.inputLang == "Spanish" ? (
+          {state.inputLang === "spanish" || state.inputLang === "Spanish" ? (
             <select className="flag-box home-input-flag spanish-flag" onChange={(event) => updateInputLang(event)}>
               <option>Choose Language</option>
               <option>English</option>
@@ -19,7 +19,7 @@ export default function Input() {
               <option>French</option>
               <option>Tagalog</option>
             </select>
-          ) : state.inputLang == "tagalog" || state.inputLang == "Tagalog" ? (
+          ) : state.inputLang === "tagalog" || state.inputLang === "Tagalog" ? (
             <select className="flag-box home-input-flag philippines-flag" onChange={(event) => updateInputLang(event)}>
               <option></option>
               <option>Choose Language</option>
@@ -28,7 +28,7 @@ export default function Input() {
               <option>French</option>
               <option>Tagalog</option>
             </select>
-          ) : state.inputLang == "french" || state.inputLang == "French" ? (
+          ) : state.inputLang === "french" || state.inputLang === "French" ? (
             <select className="flag-box home-input-flag french-flag" onChange={(event) => updateInputLang(event)}>
               <option></option>
               <option>Choose Language</option>

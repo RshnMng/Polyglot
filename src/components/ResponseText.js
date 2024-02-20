@@ -11,7 +11,7 @@ export default function Input() {
       <div className="translation-input-div">
         <div className="translation-label-textarea-div">
           <div className="translation-label-div">
-            {state.language == "spanish" || state.language == "Spanish" ? (
+            {state.language === "spanish" || state.language === "Spanish" ? (
               <select
                 className="flag-box input-flag spanish-flag"
                 onChange={(event) => {
@@ -24,7 +24,7 @@ export default function Input() {
                 <option>French</option>
                 <option>Tagalog</option>
               </select>
-            ) : state.language == "tagalog" || state.language == "Tagalog" ? (
+            ) : state.language === "tagalog" || state.language === "Tagalog" ? (
               <select
                 className="flag-box input-flag philippines-flag"
                 onChange={(event) => {
@@ -37,7 +37,7 @@ export default function Input() {
                 <option>French</option>
                 <option>Tagalog</option>
               </select>
-            ) : state.language == "french" || state.language == "French" ? (
+            ) : state.language === "french" || state.language === "French" ? (
               <select
                 className="flag-box input-flag french-flag"
                 onChange={(event) => {

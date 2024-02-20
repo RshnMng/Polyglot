@@ -48,12 +48,12 @@ function App() {
         return { ...prevState, userInput: userInput };
       });
     },
-    fetchResponse: async (prompt) => {
+    fetchResponse: async (aiPrompt) => {
       setState((prevState) => {
         return { ...prevState, translation: "" };
       });
       const completion = await openai.chat.completions.create({
-        messages: prompt,
+        messages: aiPrompt,
         model: "gpt-3.5-turbo",
         presence_penalty: -2,
         frequency_penalty: -2,

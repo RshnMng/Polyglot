@@ -19,7 +19,7 @@ export default function HomeButtons() {
 
   return (
     <>
-      {state.userInput == "" || state.language == "" ? (
+      {state.userInput === "" || state.language === "" ? (
         <div className="home-btns">
           <div className="home-translate-btn-div">
             <Link to="/response" className="home-translate-btn">

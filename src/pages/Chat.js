@@ -50,9 +50,9 @@ export default function Chat() {
       });
       createChatComponents();
     },
-    chatResponse: async (prompt) => {
+    chatResponse: async (aiPrompt) => {
       const completion = await openai.chat.completions.create({
-        messages: prompt,
+        messages: aiPrompt,
         model: "gpt-3.5-turbo",
         temperature: 1,
       });

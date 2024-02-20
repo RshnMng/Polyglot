@@ -13,7 +13,7 @@ export default function LanguageSelect() {
       <div className="home-lang-select-div">
         <div className="home-lang-title">Select Language</div>
         <div className="home-lang-option-div">
-          {state.inputLang == "spanish" || state.inputLang == "Spanish" ? (
+          {state.inputLang === "spanish" || state.inputLang === "Spanish" ? (
             <div
               className="english-flag home-flag"
               name="flag"
@@ -34,7 +34,7 @@ export default function LanguageSelect() {
               }}
             ></div>
           )}
-          {state.inputLang == "french" || state.inputLang == "French" ? (
+          {state.inputLang === "french" || state.inputLang === "French" ? (
             <div
               className="english-flag home-flag"
               name="flag"
@@ -56,7 +56,7 @@ export default function LanguageSelect() {
             ></div>
           )}
 
-          {state.inputLang == "tagalog" || state.inputLang == "Tagalog" ? (
+          {state.inputLang === "tagalog" || state.inputLang === "Tagalog" ? (
             <div
               className="english-flag home-flag"
               name="flag"

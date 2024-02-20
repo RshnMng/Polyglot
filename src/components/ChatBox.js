@@ -16,8 +16,8 @@ export default function ChatBox() {
 
   let dummyDiv = useRef();
 
-  chatLog == "" || chatLog == null
-    ? (prompt = [
+  chatLog === "" || chatLog === null
+    ? (chatPrompt = [
         {
           role: "system",
           content: `you are a friend that replies in ${language}. Keep responses to less than 15 words`,
@@ -27,7 +27,7 @@ export default function ChatBox() {
           content: chat.userInput,
         },
       ])
-    : (prompt = [
+    : (chatPrompt = [
         {
           role: "system",
           content: `you are a friend that replies in ${language}. Keep responses to less than 15 words`,
@@ -56,7 +56,9 @@ export default function ChatBox() {
           {waiting && (
             <div className="waiting">
               <img width={20} src="https://w7.pngwing.com/pngs/150/578/png-transparent-traffic-light-computer-icons-red-red-light-color-light-traffic.png" />
-              <div className="waiting-label">Chatbot waiting...</div>
+              <div className="waiting-label" alt="">
+                Chatbot waiting...
+              </div>
             </div>
           )}
           {chatComponents}
@@ -67,9 +69,9 @@ export default function ChatBox() {
             id="text-input"
             type="text"
             onKeyDown={(event) => {
-              if (event.key == "Enter") {
+              if (event.key === "Enter") {
                 addToChatLog(userInput);
-                chatResponse(prompt);
+                chatResponse(chatPrompt);
                 resetInputs();
               }
             }}
@@ -81,11 +83,11 @@ export default function ChatBox() {
           <div
             onClick={() => {
               addToChatLog(userInput);
-              chatResponse(prompt);
+              chatResponse(chatPrompt);
               resetInputs();
             }}
           >
-            {chat.userInput == null || chat.userInput == "" ? null : <img className="send-button" src="https://cdn3.iconfinder.com/data/icons/pure-lines-color/100/sqi2016_bg1-go-17-512.png" />}
+            {chat.userInput === null || chat.userInput === "" ? null : <img className="send-button" src="https://cdn3.iconfinder.com/data/icons/pure-lines-color/100/sqi2016_bg1-go-17-512.png" alt="send-button" />}
           </div>
         </div>
       </div>
