@@ -15,6 +15,7 @@ export default function ChatBox() {
   const chatLog = chat.chatLog;
 
   let dummyDiv = useRef();
+  let chatPrompt = "";
 
   chatLog === "" || chatLog === null
     ? (chatPrompt = [
