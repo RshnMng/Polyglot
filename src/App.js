@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import Response from "./pages/TranslatorPage";
 import Chat from "./pages/Chat";
+import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 export const Context = createContext();
 
@@ -81,18 +82,20 @@ function App() {
 
   return (
     <>
-      <div className="app">
-        <Context.Provider value={state}>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Layout />}>
-                <Route index element={<Home />} />
-                <Route path="/response" element={<Response />} />
-                <Route path="/chat" element={<Chat />} />
-              </Route>
-            </Routes>
-          </BrowserRouter>
-        </Context.Provider>
+      <div className="container-fluid app">
+        <div className="row home-row">
+          <Context.Provider value={state}>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Layout />}>
+                  <Route index element={<Home />} />
+                  <Route path="/response" element={<Response />} />
+                  <Route path="/chat" element={<Chat />} />
+                </Route>
+              </Routes>
+            </BrowserRouter>
+          </Context.Provider>
+        </div>
       </div>
     </>
   );

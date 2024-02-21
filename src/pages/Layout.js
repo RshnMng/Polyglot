@@ -5,7 +5,7 @@ import Header from "../components/header";
 export default function Layout() {
   return (
     <>
-      <Header />
+      <div className="col-12 header"></div>
       <Outlet />
     </>
   );

@@ -1,7 +1,139 @@
 
+
+.app {
+  border: 2px solid #5F0D04;
+  background-color: #D99058;
+  min-height: 30px;
+  min-width: 250px;
+}
+
+
+.home-input {
+  /* background-color: pink; */
+  /* border: 8px solid red; */
+  min-height: 300px;
+}
+
+
+.home-input-row {
+  margin-top: 15px;
+}
+
+.home-buttons{
+  background-color: cyan;
+  border: 2px solid black;
+  min-height: 100px;
+}
+
+.header { 
+  border: 3px solid #5F0D04;
+  border-bottom: 5px solid #5F0D04;
+  min-height: 100px;
+  background-image: url("https://i1.wp.com/matuloo.com/wp-content/uploads/2016/11/languages.jpg?fit=800%2C519");
+    background-position: center;
+    background-size: cover;
+}
+
+.home-title {
+  background-color: #D99058;
+  text-align: center;
+  font-size: 25px;
+  color: #e9d8a6;
+  font-weight: bold;
+  text-shadow: 10px 5px 12px black;
+}
+
+.home-lang-select{
+  /* border: 8px solid red; */
+  min-height: 150px;
+}
+
+
+
+.home-flag {
+  border: 3px solid green;
+  min-height: 100px;
+  scale: .75;
+  aspect-ratio: 1/1;
+}
+
+/* .home-textarea-div {
+  background-color: lightcoral;
+  min-height: 300px;
+  border: 8px solid red;
+} */
+
+/* .home-textarea {
+  border: 8px solid red;
+} */
+.empty {
+  background-color: #D99058;
+}
+
+/* .textarea-empty {
+  border: 3px solid blue;
+} */
+
+.textarea-div {
+  display: flex;
+  justify-content: center;;
+}
+
+.main-textarea {
+  min-height: 100px;
+  width : 100%;
+  border: 2px solid #588157;
+    border-radius: 8px;
+    overflow: scroll;
+    background-color: #fefae0;
+    box-shadow: 0 0 19px 4px #621708;
+    font-family: Lora;
+    font-size: 22px;
+    color: #588157;
+    font-weight: 600;
+    flex-grow: 1;
+}
+
+.home-flag {
+    border: 1px solid #588157;
+    background-position: center;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 18px 5px black;
+    background-size: cover;
+}
+
+.french-flag {
+  background-image: url('https://static3.depositphotos.com/1006774/218/i/450/depositphotos_2182127-French-Flag-Waving-In-The-Wind.jpg');
+}
+
+.spanish-flag {
+  background-image: url("https://img.freepik.com/premium-photo/flag-spain-illustration-spanish-flag-waving_2227-735.jpg")
+}
+
+.philippines-flag {
+  background-image: url("https://t3.ftcdn.net/jpg/03/37/32/40/360_F_337324066_fGs6gLgyjk2egyRgUnze5p9HD1XO90se.jpg");
+}
+
+.english-flag {
+  background-image: url('https://w0.peakpx.com/wallpaper/173/443/HD-wallpaper-flag-of-usa-american-flag-silk-flag-silk-fabric-usa-flag-stars-on-us-flag.jpg');
+}
+
+
+
+
+@media (min-width: 575px){
+  .home-title{
+    font-size: 33px;
+  }
+}
+
+
+
+
 /* Global Styles */
 
-
+/* 
 html {
   height: -webkit-fill-available;
 }
@@ -41,11 +173,11 @@ code {
   background-size: cover;
   margin-bottom: 3%;
   border-radius: 4px;
-}
+} */
 
 /* home page styles */
 
-.home-main, .response-main, .chat-main {
+/* .home-main, .response-main, .chat-main {
     background-color: #e07a5f;
     display: flex;
     flex-direction: column;
@@ -88,9 +220,9 @@ code {
     width: 100%;
     flex-grow: 1;
     display: inline-block;
-}
+} */
 
-
+/* 
 .home-lang-select-div {
   min-height: 100px;
   display: flex;
@@ -290,11 +422,11 @@ select {
   .header {
     min-height: 250px;
   }
-}
+} */
 
 
 /* Chat Page  */
-
+/* 
 .chat-input-div {
   display: flex;
   flex-direction: column;
@@ -418,9 +550,9 @@ select {
   margin-right: auto;
   text-shadow: 10px 5px 12px  black;
   background-color: #e07a5f;
-}
+} */
 
-
+/* 
 .text-display, .textarea {
   border: 2px solid #588157;
   border-radius: 8px;
@@ -504,4 +636,4 @@ select {
   top: 8px;
   cursor: pointer;
 } 
-
+ */
