@@ -1,10 +1,15 @@
 
 
 .app {
-  border: 2px solid #5F0D04;
+  border: 6px solid #5F0D04;
   background-color: #D99058;
   min-height: 30px;
-  min-width: 250px;
+  min-width: 375px;
+  max-width: 1000px;
+}
+
+#root {
+  background-color: #335c67;
 }
 
 
@@ -20,24 +25,27 @@
 }
 
 .home-buttons{
-  background-color: cyan;
-  border: 2px solid black;
+  /* background-color: cyan; */
   min-height: 100px;
+  /* border: 8px solid red; */
+  background-color: #5F0D04;
+  padding: 40px;
+  border: 8px solid #A52A2A;
+  border-radius: 8px;
 }
 
 .header { 
-  border: 3px solid #5F0D04;
-  border-bottom: 5px solid #5F0D04;
   min-height: 100px;
   background-image: url("https://i1.wp.com/matuloo.com/wp-content/uploads/2016/11/languages.jpg?fit=800%2C519");
-    background-position: center;
-    background-size: cover;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 3px solid #5F0D04;
 }
 
 .home-title {
   background-color: #D99058;
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
   color: #e9d8a6;
   font-weight: bold;
   text-shadow: 10px 5px 12px black;
@@ -46,15 +54,18 @@
 .home-lang-select{
   /* border: 8px solid red; */
   min-height: 150px;
+  background-color: #335c67;
+  padding: 30px;
+  border-radius: 8px;;
+  border: 8px solid #588157;
 }
-
 
 
 .home-flag {
   border: 3px solid green;
   min-height: 100px;
-  scale: .75;
   aspect-ratio: 1/1;
+  max-width: 120px;
 }
 
 /* .home-textarea-div {
@@ -82,6 +93,7 @@
 .main-textarea {
   min-height: 100px;
   width : 100%;
+  max-width: 500px;
   border: 2px solid #588157;
     border-radius: 8px;
     overflow: scroll;
@@ -92,6 +104,8 @@
     color: #588157;
     font-weight: 600;
     flex-grow: 1;
+    padding-top: 35px;
+    padding-left: 35px;
 }
 
 .home-flag {
@@ -119,12 +133,42 @@
   background-image: url('https://w0.peakpx.com/wallpaper/173/443/HD-wallpaper-flag-of-usa-american-flag-silk-flag-silk-fabric-usa-flag-stars-on-us-flag.jpg');
 }
 
+.home-btn {
+  text-decoration: none;
+    margin-inline: auto;
+    font-size: 18px;
+    padding: .5rem;
+    border-radius: 5px;
+    border-radius: 10px;
+    border: 1px solid #588157;
+    background-color: #8ecae6;
+    color: #e9d8a6;
+    text-shadow: 0 0 9px #335c67;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+
+.footer {
+  background-color: #588157;
+  min-height: 50px;
+  border-top: 3px solid #5F0D04;
+}
+
 
 
 
 @media (min-width: 575px){
   .home-title{
     font-size: 33px;
+  }
+}
+
+
+@media (min-width: 992px){
+  .main-textarea {
+    min-height: 200px;
   }
 }
 

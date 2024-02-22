@@ -7,6 +7,7 @@ export default function Layout() {
     <>
       <div className="col-12 header"></div>
       <Outlet />
+      <div className="col-12 footer"></div>
     </>
   );
 }
