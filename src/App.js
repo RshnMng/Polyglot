@@ -8,8 +8,6 @@ import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 export const Context = createContext();
 
-//refactor code so there arent duplicate functions
-
 function App() {
   const OpenAI = require("openai");
   let apikey = "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";

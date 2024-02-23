@@ -68,22 +68,6 @@
   max-width: 120px;
 }
 
-/* .home-textarea-div {
-  background-color: lightcoral;
-  min-height: 300px;
-  border: 8px solid red;
-} */
-
-/* .home-textarea {
-  border: 8px solid red;
-} */
-.empty {
-  background-color: #D99058;
-}
-
-/* .textarea-empty {
-  border: 3px solid blue;
-} */
 
 .textarea-div {
   display: flex;
@@ -154,6 +138,28 @@
   background-color: #588157;
   min-height: 50px;
   border-top: 3px solid #5F0D04;
+}
+
+.flag-box {
+  width: 75px;
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-top: 5px;
+}
+
+.flagbox-div{
+  background-color: #335c67;
+  padding-bottom: 5px;
+  border-radius: 8px;
+  border: 4px solid #588157;
+
+}
+
+.home-text {
+  text-align: left;
 }
 
 

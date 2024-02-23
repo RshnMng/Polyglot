@@ -1,8 +1,8 @@
 import React, { useState, createContext } from "react";
-import ChatLabel from "../components/ChatLabel";
-import ChatBox from "../components/ChatBox";
-import ChatLinks from "../components/ChatLinks";
-import ChatMessage from "../components/ChatMessage";
+import ChatLabel from "../OLD CODE/ChatLabel";
+import ChatBox from "../OLD CODE/ChatBox";
+import ChatLinks from "../OLD CODE/ChatLinks";
+import ChatMessage from "../OLD CODE/ChatMessage";
 
 export const ChatContext = createContext();
 
