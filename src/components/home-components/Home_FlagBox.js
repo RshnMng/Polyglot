@@ -7,7 +7,7 @@ export default function Home_FlagBox() {
 
   console.log(state);
   return (
-    <div className="home-label-div">
+    <>
       {state.inputLang == "spanish" || state.inputLang == "Spanish" ? (
         <select className="flag-box home-input-flag spanish-flag" onChange={(event) => updateInputLang(event)}>
           <option>Choose Language</option>
@@ -44,6 +44,6 @@ export default function Home_FlagBox() {
           <option>Tagalog</option>
         </select>
       )}
-    </div>
+    </>
   );
 }

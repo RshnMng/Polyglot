@@ -8,10 +8,10 @@ export default function Home() {
         <div className="row home-input-row mt-2">
           <div className="col-12 col-md-7 col-lg-offset-3 mb-2 home-title">
             <div className="row flag-box-title-row">
-              <div className="col-2 ml-5 flagbox-div">
+              <div className="col-2 offset-1  pr-5 flagbox-div">
                 <Home_FlagBox />
               </div>
-              <div className="col-8 mr-0 home-text">Text to Translate</div>
+              <div className="col-9 mr-0 home-text">Text to Translate</div>
             </div>
           </div>
           <div className="col-12 col-md-7 home-textarea-div">
