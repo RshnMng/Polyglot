@@ -9,7 +9,7 @@ export default function LanguageSelect() {
   return (
     <>
       <div className="home-lang-select-div">
-        <div className="home-lang-title">Select Language</div>
+        {/* <div className="home-lang-title">Select Language</div>
         <div className="home-lang-option-div">
           {state.inputLang === "spanish" || state.inputLang === "Spanish" ? (
             <div
@@ -75,7 +75,7 @@ export default function LanguageSelect() {
               }}
             ></div>
           )}
-        </div>
+        </div> */}
       </div>
     </>
   );

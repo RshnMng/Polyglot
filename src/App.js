@@ -78,6 +78,8 @@ function App() {
     },
   });
 
+  console.log(state);
+
   return (
     <>
       <div className="container-fluid app">

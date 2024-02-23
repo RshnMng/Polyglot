@@ -6,6 +6,7 @@
   min-height: 30px;
   min-width: 375px;
   max-width: 1000px;
+  
 }
 
 #root {
@@ -93,11 +94,11 @@
 }
 
 .home-flag {
-    border: 1px solid #588157;
-    background-position: center;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 0 18px 5px black;
+  background-position: center;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #588157;
+  box-shadow: 0 0 18px 5px black;
     background-size: cover;
 }
 
@@ -148,10 +149,16 @@
   display: block;
   margin-left: auto;
   margin-top: 5px;
-  border: 3px solid cyan;
   padding-inline: 55%;
   max-width: 77px;
   min-width: 50px;
+  cursor: pointer;
+    border: 1px solid #588157;
+    box-shadow: 0 0 22px 2px black;
+}
+
+.flag-box:focus {
+  outline: 1px solid #5F0D04;
 }
 
 .flagbox-div{

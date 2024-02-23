@@ -1,5 +1,7 @@
 import React from "react";
 import Home_FlagBox from "../components/home-components/Home_FlagBox";
+import Home_Buttons from "../components/home-components/Home_Buttons";
+import Home_Lang_Select from "../components/home-components/Home_Lang_Select";
 
 export default function Home() {
   return (
@@ -19,32 +21,12 @@ export default function Home() {
               <div className="col-10 textarea-div mb-5 ">
                 <textarea className="main-textarea"></textarea>
               </div>
-              <div className="col col-md-11 col-sm-10 mx-auto my-auto  mb-3 home-lang-select">
-                <div className="row home-lang-select-row d-flex justify-content-around">
-                  <div className="col-3 mx-2 p-0">
-                    <div className="home-flag french-flag"></div>
-                  </div>
-                  <div className="col-3 mx-2 p-0">
-                    <div className="home-flag spanish-flag "></div>
-                  </div>
-                  <div className="col-3 mx-2 p-0">
-                    <div className="home-flag philippines-flag "></div>
-                  </div>
-                </div>
-              </div>
+              <Home_Lang_Select />
             </div>
           </div>
-          <div className="col-12 col-md-5  mb-auto home-buttons">
-            <div className="row home-btn-row mb-3">
-              <button className="home-btn col-10 col-lg-10 col-sm-6">Start A Chat</button>
-              <button className="home-btn col-10 col-lg-10 col-sm-6">Translate</button>
-            </div>
-          </div>
+          <Home_Buttons />
         </div>
       </div>
     </>
   );
 }
-
-// style home flags using old styling and then give them the proper background image
-// then style the select drop menu using  bootstrap
