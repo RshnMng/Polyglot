@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { ChatContext } from "../pages/Chat";
+import { ChatContext } from "./Chat";
 import { Context } from "../App";
 
 export default function ChatLinks() {

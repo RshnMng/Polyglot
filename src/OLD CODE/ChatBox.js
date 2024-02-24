@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useEffect } from "react";
-import { ChatContext } from "../pages/Chat";
+import { ChatContext } from "./Chat";
 
 export default function ChatBox() {
   const chat = useContext(ChatContext);

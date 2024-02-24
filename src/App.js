@@ -2,8 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState, createContext } from "react";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
-import Response from "./pages/TranslatorPage";
-import Chat from "./pages/Chat";
+import Translation_Page from "./pages/Translation_Page";
+import Chat_Page from "./pages/Chat_Page";
 import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 export const Context = createContext();
@@ -90,8 +90,8 @@ function App() {
               <Routes>
                 <Route path="/" element={<Layout />}>
                   <Route index element={<Home />} />
-                  <Route path="/response" element={<Response />} />
-                  <Route path="/chat" element={<Chat />} />
+                  <Route path="/translation" element={<Translation_Page />} />
+                  <Route path="/chat" element={<Chat_Page />} />
                 </Route>
               </Routes>
             </BrowserRouter>

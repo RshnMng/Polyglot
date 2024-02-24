@@ -1,7 +1,7 @@
 import React from "react";
-import OriginalText from "../OLD CODE/OriginalText";
-import ResponseText from "../OLD CODE/ResponseText";
-import Buttons from "../OLD CODE/Buttons";
+import OriginalText from "./OriginalText";
+import ResponseText from "./ResponseText";
+import Buttons from "./Buttons";
 
 export default function TranslatorPage() {
   return (
