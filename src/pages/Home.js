@@ -1,7 +1,7 @@
 import React from "react";
-import Home_FlagBox from "../components/home-components/Home_FlagBox";
-import Home_Buttons from "../components/home-components/Home_Buttons";
-import Home_Lang_Select from "../components/home-components/Home_Lang_Select";
+import HOME_FLAGBOX from "../components/home-components/Home_FlagBox";
+import HOME_BUTTONS from "../components/home-components/Home_Buttons";
+import HOME_LANG_SELECT from "../components/home-components/Home_Lang_Select";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
           <div className="col-12 col-md-7 col-lg-offset-3 mb-2 home-title">
             <div className="row flag-box-title-row">
               <div className="col-2 offset-1  pr-5 flagbox-div">
-                <Home_FlagBox />
+                <HOME_FLAGBOX />
               </div>
               <div className="col-9 mr-0 home-text">Text to Translate</div>
             </div>
@@ -21,10 +21,10 @@ export default function Home() {
               <div className="col-10 textarea-div mb-5 ">
                 <textarea className="main-textarea"></textarea>
               </div>
-              <Home_Lang_Select />
+              <HOME_LANG_SELECT />
             </div>
           </div>
-          <Home_Buttons />
+          <HOME_BUTTONS />
         </div>
       </div>
     </>
