@@ -82,8 +82,9 @@ function App() {
 
   return (
     <>
-      <div className="container-fluid app">
-        <div className="row home-row">
+      <div className="check"></div>
+      <div className="container-fluid app d-flex flex-column">
+        <div className="row home-row flex-grow-1">
           <Context.Provider value={state}>
             <BrowserRouter>
               <Routes>
@@ -97,6 +98,7 @@ function App() {
           </Context.Provider>
         </div>
       </div>
+      <div className="check"></div>
     </>
   );
 }

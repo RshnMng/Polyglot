@@ -13,6 +13,10 @@
   background-color: #335c67;
 }
 
+.body {
+  background-color: #335c67;
+}
+
 
 .home-input {
   /* background-color: pink; */
@@ -93,6 +97,10 @@
     padding-left: 35px;
 }
 
+.main-textarea:focus{
+  outline: #588157
+}
+
 .home-flag {
   background-position: center;
   border-radius: 5px;
@@ -132,6 +140,37 @@
     font-weight: bold;
     margin-bottom: 5px;
 }
+
+.home-flex {
+  border: 4px solid magenta;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.home-input {
+  display: flex;
+}
+
+.home-flex-spacing {
+  background-color: pink;
+  min-height: 100%;
+  width: 100%;
+  flex-grow: 1;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.check {
+  flex-grow: 1;
+  min-height: .5px;
+}
+
 
 
 
