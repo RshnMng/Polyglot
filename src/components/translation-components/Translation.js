@@ -1,18 +1,18 @@
 import React, { useContext } from "react";
-import Home_FlagBox from "../home-components/Home_FlagBox";
+import TRANSLATION_FLAGBOX from "./translation_flagbox";
 import { Context } from "../../App";
 
 export default function TRANSLATION() {
   let state = useContext(Context);
   const output = state.translation;
-  console.log(output);
+
   return (
     <>
       <div className="col-12 home-input flex-column">
         <div className="row home-input-row mt-2 ">
           <div className="col-12 d-flex col-lg-offset-3 mb-2 home-title">
             <div className="col-2 offset-1  pr-5 flagbox-div">
-              <Home_FlagBox />
+              <TRANSLATION_FLAGBOX />
             </div>
             <div className="col-9 col-md-12 mr-0 home-text">Translation</div>
           </div>

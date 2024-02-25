@@ -101,6 +101,14 @@
   outline: #588157
 }
 
+.translation-textarea:focus {
+  outline: #588157
+}
+
+.input-textarea:focus {
+  outline: #588157
+}
+
 .home-flag {
   background-position: center;
   border-radius: 5px;
@@ -183,7 +191,7 @@
   margin-left: auto;
   margin-top: 5px;
   min-height: 40px;
-  padding: 10px;
+  padding: 10px 15px;
   max-width: 77px;
   min-width: 50px;
   cursor: pointer;
@@ -206,6 +214,7 @@
   justify-content: center;
   max-width: 80px;
   margin-right: 20px;
+  padding-inline: 30px;
 
 }
 
@@ -320,6 +329,11 @@
     position: relative;
     max-width: 500px;
     left: 7px;
+}
+
+#text-input:focus {
+  outline:  2px solid #588157;
+
 }
 
 .text-input-div {

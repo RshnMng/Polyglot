@@ -10,7 +10,7 @@ export const Context = createContext();
 
 function App() {
   const OpenAI = require("openai");
-  let apikey = "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";
+  let apikey = "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";
 
   const openai = new OpenAI({
     apiKey: apikey,
@@ -76,6 +76,35 @@ function App() {
       });
       currentDiv.classList.add("selected");
     },
+    switchLangs: (lang1, lang2) => {
+      setState((prevState) => {
+        return { ...prevState, inputLang: lang2, language: lang1 };
+      });
+    },
+    resetInputs: () => {
+      setState((prevState) => {
+        return { ...prevState, userInput: "" };
+      });
+    },
+    chatResponse: async (aiPrompt) => {
+      const completion = await openai.chat.completions.create({
+        messages: aiPrompt,
+        model: "gpt-3.5-turbo",
+        temperature: 1,
+      });
+
+      let aiReply = completion.choices[0].message.content;
+      setState((prevState) => {
+        return { ...prevState, chatReply: aiReply };
+      });
+      let aiInput = { role: "assistant", content: aiReply };
+
+      // chat.addToChatLog(aiInput);
+      // createChatComponents();
+      // chat.changeWaiting(true);
+    },
+    chatReply: "",
+    chatLog: [],
   });
 
   console.log(state);
