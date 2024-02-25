@@ -67,9 +67,7 @@ export default function Input() {
             <h2 className="translation-label">Translation</h2>
           </div>
           <div className="text-div">
-            <div className="response-textarea" rows={8} cols={45}>
-              {output ? output : "Translating..."}
-            </div>
+            <div className="response-textarea">{output}</div>
           </div>
         </div>
       </div>

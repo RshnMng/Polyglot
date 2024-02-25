@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Home_FlagBox from "../home-components/Home_FlagBox";
+import { Context } from "../../App";
 
 export default function TRANSLATION() {
+  let state = useContext(Context);
+  const output = state.translation;
+  console.log(output);
   return (
     <>
       <div className="col-12 home-input flex-column">
@@ -16,7 +20,7 @@ export default function TRANSLATION() {
         <div className="col-12 home-textarea-div">
           <div className="row d-flex justify-content-center  home-textarea-row">
             <div className="col-10 textarea-div mb-5 ">
-              <textarea className="translation-textarea"></textarea>
+              <textarea className="translation-textarea" readOnly value={output ? output : "Translating..."}></textarea>
             </div>
           </div>
         </div>
@@ -24,3 +28,6 @@ export default function TRANSLATION() {
     </>
   );
 }
+
+// make it so translate button is disabled on home screen doesnt if text area is empty and
+// no language is selected // add information on click to tell user what to do

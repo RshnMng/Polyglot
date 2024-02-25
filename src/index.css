@@ -1,5 +1,5 @@
 
-/* home stylings */
+/* global stylings */
 .app {
   border: 6px solid #5F0D04;
   background-color: #D99058;
@@ -12,14 +12,19 @@
 
 #root {
   background-color: #335c67;
-    padding-right: 3x;
-      padding-bottom: 3px;
+  padding-right: 3x;
+  padding-bottom: 3px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .body {
   background-color: #335c67;
 }
 
+
+/* home stylings */
 
 .home-input, .translate-input {
   min-height: 300px;
@@ -73,10 +78,6 @@
 }
 
 
-.textarea-div {
-  display: flex;
-}
-
 .main-textarea, .translation-textarea, .input-textarea {
   min-height: 100px;
   width : 100%;
@@ -106,7 +107,7 @@
   cursor: pointer;
   border: 1px solid #588157;
   box-shadow: 0 0 18px 5px black;
-    background-size: cover;
+  background-size: cover;
 }
 
 .french-flag {
@@ -161,11 +162,6 @@
   flex-grow: 1;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
 .check {
   flex-grow: 1;
@@ -186,17 +182,20 @@
   display: block;
   margin-left: auto;
   margin-top: 5px;
-  padding: 1%;
+  min-height: 40px;
+  padding: 10px;
   max-width: 77px;
   min-width: 50px;
   cursor: pointer;
-    border: 1px solid #588157;
-    box-shadow: 0 0 22px 2px black;
+  border: 1px solid #588157;
+  box-shadow: 0 0 22px 2px black;
+  font-size: 0;
 }
 
 .flag-box:focus {
   outline: 1px solid #5F0D04;
 }
+
 
 .flagbox-div{
   background-color: #335c67;
@@ -213,6 +212,12 @@
 .home-text {
   text-align: left;
 }
+
+.selected {
+  scale: 1.1;
+  box-shadow: 0 0 18px 5px #e9d8a6;
+}
+
 
 /* Translation styles */
 

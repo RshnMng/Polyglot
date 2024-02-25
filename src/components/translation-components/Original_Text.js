@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../../App";
 import HOME_FLAGBOX from "../home-components/Home_FlagBox";
 
 export default function ORIGINAL_TEXT() {
+  const state = useContext(Context);
+  const input = state.userInput;
+  const updateInput = state.updateInput;
+
   return (
     <>
       <div className="col-12 home-input flex-column">
@@ -16,7 +21,7 @@ export default function ORIGINAL_TEXT() {
         <div className="col-12 home-textarea-div">
           <div className="row d-flex justify-content-center  home-textarea-row">
             <div className="col-10 textarea-div mb-5 ">
-              <textarea className="input-textarea"></textarea>
+              <textarea className="input-textarea" onChange={updateInput} value={input}></textarea>
             </div>
           </div>
         </div>

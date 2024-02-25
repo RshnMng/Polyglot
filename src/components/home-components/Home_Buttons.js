@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../../App";
 import { Link } from "react-router-dom";
+
 export default function Home_Buttons() {
+  const state = useContext(Context);
+  const fetchResponse = state.fetchResponse;
+
+  const messages = [
+    {
+      role: "system",
+      content: `You're a language translator that reads what is sent to you and returns it in ${state.language} `,
+    },
+    {
+      role: "user",
+      content: state.userInput,
+    },
+  ];
+
   return (
     <>
       <div className="col-12 col-md-5  mb-auto home-buttons">
@@ -8,7 +24,7 @@ export default function Home_Buttons() {
           <Link to="/chat" className="home-btn col-10 col-lg-10 col-xs-6">
             Start A Chat
           </Link>
-          <Link to="/translation" className="home-btn col-10 col-lg-10 col-xs-6">
+          <Link to="/translation" className="home-btn col-10 col-lg-10 col-xs-6" onClick={() => fetchResponse(messages)}>
             Translate
           </Link>
         </div>

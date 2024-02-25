@@ -10,7 +10,7 @@ export const Context = createContext();
 
 function App() {
   const OpenAI = require("openai");
-  let apikey = "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";
+  let apikey = "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";
 
   const openai = new OpenAI({
     apiKey: apikey,
@@ -57,7 +57,7 @@ function App() {
         presence_penalty: -2,
         frequency_penalty: -2,
       });
-
+      console.log(completion);
       let translation = completion.choices[0].message.content;
       setState((prevState) => {
         return { ...prevState, translation: translation };
