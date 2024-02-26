@@ -140,6 +140,11 @@ function App() {
         return { ...prevState, waiting: boolean };
       });
     },
+    clearChat: function () {
+      setState((prevState) => {
+        return { ...prevState, chatComponents: [], chatLog: [] };
+      });
+    },
   });
 
   console.log(state);
