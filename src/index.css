@@ -353,6 +353,40 @@
   
 }
 
+.sent-by-user {
+  color: #3a5a40;
+  background-color: #e9edc9;
+  text-align: left;
+  padding-right: 7px;
+  margin-left: auto;
+
+
+}
+
+.sent-by-ai {
+  color: #bc6c25;
+  background-color: #faedcd;
+  text-align: left;
+  padding-left: 7px;
+  margin-right: auto;
+
+}
+
+.message-div {
+  border: 1px solid #588157;
+  font-size: 20px;
+  border-radius: 6px;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Media Queries */
 @media (min-width: 575px){
   .translation-title, .input-title {

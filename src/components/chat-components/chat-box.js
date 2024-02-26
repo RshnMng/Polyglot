@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../../App";
 
 export default function CHAT_BOX() {
-  let waiting = true;
+  const state = useContext(Context);
+  const chatComponents = state.chatComponents;
+  let waiting = state.waiting;
+
+  console.log(waiting);
 
   return (
     <>
@@ -15,6 +20,7 @@ export default function CHAT_BOX() {
                 <div className="waiting-label">Chatbot waiting...</div>
               </div>
             )}
+            {chatComponents}
           </div>
         </div>
       </div>

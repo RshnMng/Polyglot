@@ -7,6 +7,7 @@ import { Context } from "../App";
 
 export default function CHAT_PAGE() {
   const state = useContext(Context);
+
   return (
     <>
       <div className="col-12 col-md-7 mr-5 chat-large-left">

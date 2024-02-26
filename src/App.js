@@ -4,13 +4,14 @@ import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import TRANSLATION_PAGE from "./pages/Translation_Page";
 import CHAT_PAGE from "./pages/Chat_Page";
+import CHAT_MESSAGE from "./components/chat-components/chat-message";
 import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 export const Context = createContext();
 
 function App() {
   const OpenAI = require("openai");
-  let apikey = "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";
+  let apikey = "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";
 
   const openai = new OpenAI({
     apiKey: apikey,
@@ -44,7 +45,7 @@ function App() {
     updateInput: (event) => {
       const userInput = event.target.value;
       setState((prevState) => {
-        return { ...prevState, userInput: userInput };
+        return { ...prevState, userInput: userInput, waiting: false };
       });
     },
     fetchResponse: async (aiPrompt) => {
@@ -86,7 +87,22 @@ function App() {
         return { ...prevState, userInput: "" };
       });
     },
-    chatResponse: async (aiPrompt) => {
+    addToChatLog: (inputObj, messageLog, createChatComponents) => {
+      console.log(inputObj);
+      const inputText = document.getElementById("text-input");
+      inputText.value = "";
+      if (messageLog.length > 6) {
+        messageLog.shift();
+        messageLog.push(inputObj);
+      } else {
+        messageLog.push(inputObj);
+      }
+      setState((prevState) => {
+        return { ...prevState, chatLog: messageLog };
+      });
+      createChatComponents(messageLog);
+    },
+    chatResponse: async (aiPrompt, addToChatLog, messageLog, createChatComponents) => {
       const completion = await openai.chat.completions.create({
         messages: aiPrompt,
         model: "gpt-3.5-turbo",
@@ -99,12 +115,31 @@ function App() {
       });
       let aiInput = { role: "assistant", content: aiReply };
 
-      // chat.addToChatLog(aiInput);
-      // createChatComponents();
-      // chat.changeWaiting(true);
+      addToChatLog(aiInput, messageLog, createChatComponents);
+      createChatComponents(messageLog);
+      state.changeWaiting(true);
     },
     chatReply: "",
     chatLog: [],
+    chatComponents: [],
+    createChatComponents(chatLog) {
+      let i = 0;
+
+      const chatComponents = chatLog.map((inputObj) => {
+        i++;
+        const { role, content } = inputObj;
+        return <CHAT_MESSAGE role={role} content={content} key={i} />;
+      });
+      setState((prevState) => {
+        return { ...prevState, chatComponents: chatComponents };
+      });
+    },
+    waiting: true,
+    changeWaiting: function (boolean) {
+      setState((prevState) => {
+        return { ...prevState, waiting: boolean };
+      });
+    },
   });
 
   console.log(state);
