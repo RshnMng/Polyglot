@@ -1,13 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import CHAT_BUTTONS from "../components/chat-components/chat-buttons";
 import CHAT_LANG_SELECT from "../components/chat-components/chat-lang-select";
 import CHAT_BOX from "../components/chat-components/chat-box";
 import CHAT_SEND from "../components/chat-components/chat-send";
-import { Context } from "../App";
 
 export default function CHAT_PAGE() {
-  const state = useContext(Context);
-
   return (
     <>
       <div className="col-12 col-md-7 mr-5 chat-large-left">

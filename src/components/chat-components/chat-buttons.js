@@ -23,3 +23,6 @@ export default function CHAT_BUTTONS() {
     </>
   );
 }
+
+// make chat api call on arrow click
+// make clicking flags set the chat language

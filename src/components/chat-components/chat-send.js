@@ -71,7 +71,18 @@ export default function CHAT_SEND() {
             changeWaiting(false);
           }}
         />
-        {state.userInput === null || state.userInput === "" ? null : <img className="send-button" src="https://cdn3.iconfinder.com/data/icons/pure-lines-color/100/sqi2016_bg1-go-17-512.png" alt="send-button" />}
+        {state.userInput === null || state.userInput === "" ? null : (
+          <img
+            className="send-button"
+            src="https://cdn3.iconfinder.com/data/icons/pure-lines-color/100/sqi2016_bg1-go-17-512.png"
+            alt="send-button"
+            onClick={() => {
+              addToChatLog(userInputObj, chatLog, createChatComponents);
+              chatResponse(chatPrompt, addToChatLog, chatLog, createChatComponents);
+              resetInputs();
+            }}
+          />
+        )}
       </div>
     </>
   );
